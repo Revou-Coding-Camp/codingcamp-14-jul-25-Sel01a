@@ -1,0 +1,10 @@
+.banner {
+    border: 1px solid;
+    height: 500px;
+    background-color: lemonchiffon;
+}
+
+section {
+    min-height: 500px;
+    align-content: center;
+}

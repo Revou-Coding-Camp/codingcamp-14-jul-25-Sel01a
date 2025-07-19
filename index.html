@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test Revou</title>
+    <!-- CSS External Link -->
+    <link rel="stylesheet" href="css\styles.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body>
-    
+    <header class="flex justify-between items-center p-[10px] bg-green-200">
+        <div class="h-16 w-16 bg-[url(https://picsum.photos/seed/picsum/200/300)] rounded-full bg-center bg-cover "></div>
+        <nav class="flex">
+            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#home-page">Home</a>
+            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#our-profile">Our Profile</a>
+            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#message-us">Message Us</a>
+        </nav>
+
+    </header>
+    <main>
+        <section id="home-page">
+            <header>
+                <h1 class="text-2xl font-bold text-center my-4">Welcome <span id="welcome-user">[User]</span> to Our Website
+                </h1>
+            </header>
+            <div>
+                <p class="text-center">Halaman ini memuat beberapa konten</p>
+                <div class="banner"></div>                
+            </div>
+
+        </section>
+        <hr/>
+        <section id="our-profile">
+            <header>
+                <h2 class="text-2xl font-bold text-center my-4">Tim Pelaksana</h2>
+            </header>
+            <article>
+                <p class="text-center">Halaman ini mencakup Tim kami yang akan melaksanakan project</p>
+            </article>
+        </section>
+        <hr/>
+        <section id="message-us">
+            <header>
+                <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
+            </header>
+            <form>
+                <div class="flex flex-col items-center">
+                    <label for="name-inputt" class="mb-2">Name:</label>
+                    <input type="text" id="name-inputt" name="name" class="border rounded p-2 mb-4 w-1/2">
+
+                    <!-- 
+                    <label for="email" class="mb-2">Email:</label>
+                    <input type="text" id="email" name="email" class="border rounded p-2 mb-4 w-1/2">
+                    
+                    <label for="message" class="mb-2">Message:</label>
+                    <textarea id="message" name="message" class="border rounded p-2 mb-4 w-1/2"></textarea> -->
+                    <button onclick="validateForm();" type="button"
+                        class="bg-blue-500  text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                    Send Message</button>
+                </div>
+            </form>
+            <div id="message-output" class="text-center mt-4">Result:    </div>
+        </section>
+    </main>
+    <footer>
+        <p class="text-center text-gray-600 py-4">2025 Acel Company. All rights reserved</p>
+    </footer>
+    <!-- javascript -->
+     <script src="js\script.js"></script>
 </body>
 </html>
