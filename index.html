@@ -45,25 +45,53 @@
         <hr/>
         <section id="message-us">
             <header>
-                <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
+                <h2 class="text-2xl font-bold text-center my-4">Message Us</h2>
             </header>
-            <form>
-                <div class="flex flex-col items-center">
-                    <label for="name-inputt" class="mb-2">Name:</label>
-                    <input type="text" id="name-inputt" name="name" class="border rounded p-2 mb-4 w-1/2">
+            <div class="flex flex-row justify-around items-center">
+                <form>
+                    <div class="flex flex-col items-start w-full max-w-md">
+                        
+                        <!-- Nama -->
+                        <div class="flex items-center mb-4 w-full">
+                        <label for="name-inputt" class="w-32">Nama:</label>
+                        <input type="text" id="name-inputt" name="nama" class="border rounded p-2 flex-1">
+                        </div>
 
-                    <!-- 
-                    <label for="email" class="mb-2">Email:</label>
-                    <input type="text" id="email" name="email" class="border rounded p-2 mb-4 w-1/2">
-                    
-                    <label for="message" class="mb-2">Message:</label>
-                    <textarea id="message" name="message" class="border rounded p-2 mb-4 w-1/2"></textarea> -->
-                    <button onclick="validateForm();" type="button"
-                        class="bg-blue-500  text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
-                    Send Message</button>
+                        <!-- Tanggal Lahir -->
+                        <div class="flex items-center mb-4 w-full">
+                        <label for="tgllahir" class="w-32">Tanggal Lahir:</label>
+                        <input type="date" id="tgllahir" name="tgllahir" class="border rounded p-2 flex-1">
+                        </div>
+
+                        <!-- Jenis Kelamin -->
+                        <div class="flex items-center mb-4 w-full">
+                        <label class="w-32">Jenis Kelamin:</label>
+                        <div class="flex gap-4">
+                            <label><input type="radio" name="jeniskelamin" value="Laki-laki"> Laki-laki</label>
+                            <label><input type="radio" name="jeniskelamin" value="Perempuan"> Perempuan</label>
+                        </div>
+                        </div>
+
+                        <!-- Pesan -->
+                        <div class="flex items-start mb-4 w-full">
+                        <label for="message" class="w-32 pt-2">Message:</label>
+                        <textarea id="message" name="message" class="border rounded p-2 flex-1 h-24"></textarea>
+                        </div>
+
+                        <!-- Tombol -->
+                        <div class="flex justify-end w-full">
+                        <button onclick="validateForm();" type="button"
+                            class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+                            Send Message
+                        </button>
+                        </div>
+
+                    </div>
+                </form>
+                <div id="message-output" class="text-left mt-4 border rounded p-4 w-64">
+                    Result:
                 </div>
-            </form>
-            <div id="message-output" class="text-center mt-4">Result:    </div>
+            </div>
         </section>
     </main>
     <footer>
